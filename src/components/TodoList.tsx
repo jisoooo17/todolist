@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Button, Input } from 'antd';
+import TodoItem from './TodoItem';
+import CreateTodo from './CreateTodo';
+
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
 
 const TodoList = () => {
-  interface TodoList {
-    id: number;
-    text: string;
-    completed: boolean;
-  }
-
-  const [list, setList] = useState<TodoList[]>([
+  const [list, setList] = useState<Todo[]>([
     {
       id: 1,
       text: "할 일1",
@@ -26,14 +27,7 @@ const TodoList = () => {
       {
         list.map((item, i) => {
           return(
-            <li className="list">
-              <Button type="primary">완료</Button>
-              <p className="txt">할 일</p>
-              <div className="btn-w">
-                <Button htmlType="button" className="btn-adit">수정</Button>
-                <Button htmlType="button" className="btn-del">삭제</Button>
-              </div>
-            </li>
+            <TodoItem key={item.id} text={item.text} completed={item.completed}/>
           )
         })
       }

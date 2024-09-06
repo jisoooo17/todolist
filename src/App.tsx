@@ -14,13 +14,7 @@ function App() {
 
         </div>
 
-        <div className="input-area">
-          <div className="input-w">
-            {/* <input type="text" placeholder="할 일을 입력하세요." /> */}
-            <Input placeholder="Basic usage" />
-            <Button type="primary" className="btn-register">등록</Button>
-          </div>
-        </div>
+        
       </div>
 
     </div>
