@@ -18,7 +18,7 @@ body {background-color: #216fae1c;}
 .wrap {margin: 80px auto; width: 80%;}
 .list {display: flex;}
 .list + .list {margin-top: 20px;}
-.list .txt {margin: 0 12px; padding: 4px; width: calc(100% - 200px); border-bottom: 1px solid #777;}
+.list .txt {margin: 0 12px; padding: 4px; width: calc(100% - 240px); border-bottom: 1px solid #777;}
 
 .btn-del {margin-left: 4px;}
 .btn-register {margin-left: 4px; height: 44px;}
