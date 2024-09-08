@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TodoItem from './TodoItem';
 import CreateTodo from './CreateTodo';
 
-interface Todo {
+export interface Todo {
   id: number;
   text: string;
   completed: boolean;
@@ -50,9 +50,11 @@ const TodoList = () => {
   }
 
   // 리스트 수정
-  const listEdit = (newTodo: Todo): void => { // newTodo는 새롭게 입력한 값
-    const newTodoList = list.map((item)=>{
+  const listUpdate = (newTodo: Todo): void => { // newTodo는 새롭게 입력한 값
+    console.log(newTodo)
 
+    // 해당하는 id의 할 일을 새로운 내용으로 변경
+    const newTodoList = list.map((item)=>{
       if (item.id === newTodo.id){ // id값이 같으면 새롭게 입력한 값으로 return
         return newTodo;
       } else { // 그 외에는 기존 값 return
@@ -68,7 +70,7 @@ const TodoList = () => {
         {
           list.map((item, i) => {
             return(
-              <TodoItem key={item.id} id={item.id} text={item.text} completed={item.completed} onClkDel={listDelete}/>
+              <TodoItem key={item.id} id={item.id} text={item.text} completed={item.completed} onClkDel={listDelete} onClkUpdate={listUpdate}/>
             )
           })
         }

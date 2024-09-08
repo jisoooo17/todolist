@@ -16,8 +16,8 @@ input:focus, input:active {outline: none;}
 
 body {background-color: #216fae1c;}
 .wrap {margin: 80px auto; width: 80%;}
-.list {display: flex;}
 .list + .list {margin-top: 20px;}
+.list .cont {display: flex;}
 .list .txt {margin: 0 12px; padding: 4px; width: calc(100% - 240px); border-bottom: 1px solid #777;}
 
 .btn-del {margin-left: 4px;}
