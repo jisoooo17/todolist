@@ -11,26 +11,31 @@ interface TodoItemProps {
   onClkUpdate(updatedTodoItem: Todo): void;
 }
 
-const TodoItem = ({id, text, completed, onClkDel, onClkUpdate}: TodoItemProps) => { //  props를 타입에 맞게 지정
-  // 수정 여부
-  const [isUpdating, setIsUpdating] = useState<boolean>(false);
-  const [updatedTxt, setUpdatedTxt] = useState<string>(text);
+const TodoItem = ({id, text, completed, onClkDel, onClkUpdate}: TodoItemProps) => {
+  const [isUpdating, setIsUpdating] = useState<boolean>(false); // 수정 상태 관리
+  const [updatedTxt, setUpdatedTxt] = useState<string>(text); // 수정할 텍스트 관리
 
+   // 입력 필드의 텍스트 변경 처리 함수
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUpdatedTxt(e.target.value);
   };
 
+   // 폼 제출 시 호출되는 함수
   const inputSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+     // 업데이트된 할 일 항목 객체 생성
     const updatedTodoItem = {
       id: id,
       text: updatedTxt,
       completed: completed,
     };
+
     onClkUpdate(updatedTodoItem);
     setIsUpdating(false);
   };
 
+  // 할 일 완료 상태 토글 함수
   const listComplete = () => {
     const updatedTodoItem = {
       id: id,

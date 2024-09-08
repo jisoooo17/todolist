@@ -79,7 +79,6 @@ const TodoList = () => {
     });
   };
 
-
   // 리스트 수정
   const listUpdate = (newTodo: Todo): void => {
     const newTodoList = list.map((item) => {
