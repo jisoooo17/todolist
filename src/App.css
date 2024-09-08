@@ -15,7 +15,7 @@ input:focus, input:active {outline: none;}
 
 body {background-color: #216fae1c; }
 .wrap {margin: 0 auto; padding: 120px 0; width: 840px;}
-.list-area {padding: 80px; background-color: #fff; border-radius: 4px;}
+.list-area {padding: 80px; background-color: #fff; border-radius: 4px;  box-shadow: 0 0 20px #3b3b3b0a;}
 h3 {margin-bottom: 48px; text-align: center; font-size: 28px;}
 .container {margin-bottom: 60px;}
 .list + .list {margin-top: 20px;}
