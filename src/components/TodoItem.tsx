@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Input } from 'antd';
 import {Todo} from "./TodoList";
-// import {
-//   AiOutlineEdit,
-//   AiOutlineDelete,
-//   AiOutlineCheck,
-//   AiOutlineClose,
-// } from "react-icons/ai";
-import { AiOutlineEdit,
-  AiOutlineDelete,
-  AiOutlineCheck,
-  AiOutlineClose, } from "react-icons/ai";
-
+import { AiOutlineEdit, AiOutlineDelete, AiOutlineCheck, AiOutlineClose, } from "react-icons/ai";
 
 interface TodoItemProps {
   id: number;
@@ -56,7 +46,7 @@ const TodoItem = ({id, text, completed, onClkDel, onClkUpdate}: TodoItemProps) =
       {
         !isUpdating ? (
           <div className="cont">
-            <Button htmlType="button" onClick={listComplete}>
+            <Button htmlType="button" className="btn-complete" onClick={listComplete}>
               {completed ? "✔" : null}
             </Button>
 
@@ -69,13 +59,13 @@ const TodoItem = ({id, text, completed, onClkDel, onClkUpdate}: TodoItemProps) =
           </div>
         ) : (
           <div className="cont">
-            <Button htmlType="button" onClick={listComplete}>
+            <Button htmlType="button" className="btn-complete" onClick={listComplete}>
               {completed ? "✔" : null}
             </Button>
 
             <form onSubmit={inputSubmit}>
               <div className="input-w">
-                <Input type="text" value={updatedTxt} onChange={inputChange} />
+                <Input type="text" className="todo-input" value={updatedTxt} onChange={inputChange} />
                 <div className="btn-w">
                   <Button htmlType="submit" className="btn-confirm" onClick={()=> setIsUpdating(true)}><AiOutlineCheck size="17" />확인</Button>
                   <Button htmlType="button" className="btn-cancel" onClick={()=> setIsUpdating(false)}><AiOutlineClose size="17" />취소</Button>

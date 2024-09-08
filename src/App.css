@@ -10,24 +10,26 @@ a:hover, a:focus, a:active {text-decoration: none;}
 table {width: 100%; border-collapse: collapse;}
 button {background: none; border: none; padding: 0; margin: 0; font-size: 18px; cursor: pointer; overflow: visible;}
 button:focus, a:focus {outline: 0 !important;}
-/* button:focus:focus-visible, a:focus:focus-visible {outline: 2px solid black;} */
 input:focus, input:active {outline: none;}
 
 
 body {background-color: #216fae1c;}
-.wrap {margin: 80px auto; width: 80%;}
+.wrap {margin: 120px auto; width: 780px;}
+h3 {margin-bottom: 48px; text-align: center; font-size: 28px;}
+.container {margin-bottom: 30px;}
 .list + .list {margin-top: 20px;}
-.list .cont {display: flex;}
-.list .txt {margin: 0 12px; padding: 4px; width: calc(100% - 240px); border-bottom: 1px solid #777;}
+.list .cont {display: flex; align-items: center;}
+.list .cont form {width: 100%;}
+.list .txt {display: flex; align-items: center; margin-bottom: 0; padding: 8px 4px; min-width: calc(100% - 216px); height: 44px; vertical-align: middle; border-bottom: 1px solid #d9d9d9;}
+.todo-input {display: block; min-width: calc(100% - 216px); height: 44px; font-size: 16px;}
 
-.btn-del {margin-left: 4px;}
+.btn-complete {margin-right: 8px; padding: 0; min-width: 34px;}
+.btn-w {display: flex; align-items: center; margin-left: 8px;}
+.btn-w button:last-child {margin-left: 4px;}
+.btn-del {}
 .btn-register {margin-left: 4px; height: 44px;}
 
-/* form - input */
 .input-w {display: flex; position: relative; width: 100%;}
-/* .input-w input { width: calc(100% - 60px); font-weight: 400; height: 48px; padding: 0 20px; font-size:14px; color: #1f1b1c; border: 1px solid #e0e0e0; border-radius: 4px;} */
-/* .input-w input::placeholder{font-size: 14px;} */
-/* .input-w input:focus {color: #1f1b1c; border: 1px solid #004D45; background-color: rgba(23, 175, 152, 0.06);} */
 
   
 

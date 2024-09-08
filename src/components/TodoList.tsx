@@ -13,12 +13,12 @@ const TodoList = () => {
   const initialTodos: Todo[] = [
     {
       id: 1,
-      text: "할 일1",
+      text: "영어 단어 외우기",
       completed: false,
     },
     {
       id: 2,
-      text: "할 일2",
+      text: "강아지 산책하기",
       completed: false,
     }
   ];
@@ -30,7 +30,7 @@ const TodoList = () => {
       try {
         return JSON.parse(savedTodos);
       } catch (error) {
-        console.error('Failed to parse todos from localStorage:', error);
+        console.error(error);
         return initialTodos;
       }
     } else {
