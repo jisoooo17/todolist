@@ -14,7 +14,7 @@ const TodoList = () => {
   const initialTodos: Todo[] = [
     {
       id: 1,
-      text: "영어 단어 외우기",
+      text: "Typescript 강의 듣기",
       completed: false,
     },
     {
@@ -93,7 +93,7 @@ const TodoList = () => {
   };
 
   return (
-    <div>
+    <div className="list-area">
       <h3>To do List</h3>
       <ul className="container">
         {

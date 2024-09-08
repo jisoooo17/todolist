@@ -14,21 +14,22 @@ input:focus, input:active {outline: none;}
 
 
 body {background-color: #216fae1c; }
-.wrap {margin: 0 auto; padding: 120px 0; width: 780px;}
+.wrap {margin: 0 auto; padding: 120px 0; width: 840px;}
+.list-area {padding: 80px; background-color: #fff; border-radius: 4px;}
 h3 {margin-bottom: 48px; text-align: center; font-size: 28px;}
-.container {margin-bottom: 30px;}
+.container {margin-bottom: 60px;}
 .list + .list {margin-top: 20px;}
-.list .cont {display: flex; align-items: center;}
+.list .cont {display: flex; align-items: end;}
 .list .cont form {width: 100%;}
-.list .txt {display: flex; align-items: center; margin-bottom: 0; padding: 8px 4px; min-width: calc(100% - 216px); min-height: 44px; vertical-align: middle; border-bottom: 1px solid #d9d9d9;}
+.list .txt {display: flex; align-items: end; margin-bottom: 0; padding: 8px 4px; min-width: calc(100% - 216px); min-height: 44px; vertical-align: middle; border-bottom: 1px solid #d9d9d9;}
 .input-w {display: flex; position: relative; width: 100%;}
-.todo-input {display: block; min-width: calc(100% - 216px); min-height: 44px; font-size: 16px;}
+.todo-input {display: block; top: 6px; min-width: calc(100% - 216px); min-height: 44px; font-size: 16px;}
 .btn-complete {margin-right: 8px; padding: 0; min-width: 34px;}
-.btn-w {display: flex; align-items: center; margin-left: 8px;}
+.btn-w {display: flex; align-items: end; margin-left: 8px;}
 .btn-w button:last-child {margin-left: 4px;}
-.btn-register {margin-left: 4px; min-height: 44px;}
+.btn-register {margin-left: 8px; min-height: 44px;}
 
-@media screen and (max-width: 829px){
+@media screen and (max-width: 879px){
   .wrap {width: 80%;}
   .list .txt {min-width: calc(100% - 125px)}
   .btn-w button {padding: 2px 8px;}
