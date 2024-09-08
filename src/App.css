@@ -1,6 +1,6 @@
 /* reset */
 * {margin: 0; padding: 0; }
-html {width: 100%; height: 100%;}
+html {width: 100%; height: 100%; overflow-x: hidden;}
 ul, ol, li {list-style: none;}
 input {padding: 3px 20px; min-height: 44px;}
 textarea {padding: 10px; width: 100%; font-size: 18px; color: #1f1b1c;  resize: none;}
@@ -31,7 +31,8 @@ h3 {margin-bottom: 48px; text-align: center; font-size: 28px;}
 
 @media screen and (max-width: 879px){
   .wrap {width: 80%;}
-  .list .txt {min-width: calc(100% - 125px)}
+  .list-area {padding: 60px 40px;}
+  .list .txt {min-width: calc(100% - 125px); font-size: 14px;}
   .btn-w button {padding: 2px 8px;}
   .btn-w button span {display: none;}
 }
