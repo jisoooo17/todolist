@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
 import CreateTodo from './CreateTodo';
+import { Modal } from 'antd';
 
 export interface Todo {
   id: number;
@@ -69,8 +70,15 @@ const TodoList = () => {
 
   // 리스트 삭제
   const listDelete = (id: number) => {
-    setList(list.filter((item) => item.id !== id));
+    Modal.confirm({
+      title: '삭제 확인',
+      content: '삭제하시겠습니까?',
+      onOk() {
+        setList(list.filter((item) => item.id !== id));
+      }
+    });
   };
+
 
   // 리스트 수정
   const listUpdate = (newTodo: Todo): void => {

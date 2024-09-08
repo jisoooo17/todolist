@@ -12,7 +12,7 @@ const CreateTodo = ({onChange, onSubmit, inputTxt}: CreateTodoProps) => {
     <div className="input-area">
       <form onSubmit={onSubmit}>
         <div className="input-w">
-          <Input type="text" value={inputTxt} onChange={onChange}  placeholder="Basic usage" />
+          <Input type="text" value={inputTxt} onChange={onChange}  placeholder="할 일을 입력하세요." />
           <Button htmlType="submit" type="primary" className="btn-register">등록</Button>
         </div>
       </form>
